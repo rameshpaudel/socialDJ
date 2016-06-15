@@ -7,7 +7,7 @@ Router.route('/', function () {
   });
 });
 Router.route('/song', function () {
-  this.render('modal');
+  this.render('songRequest');
 });
 
 Router.route('/login', function(){
@@ -17,14 +17,19 @@ Router.route('/video', function(){
   this.render('player');
 });
 
-Router.route('/chat',{
-	action: function () {
-    // render all templates and regions for this route
-    
-	this.render('chapp_form');
-  	},
-	onBeforeAction: function () {
-		Session.set('chapp-docid','uniqueIdentifier');
-	},
+Router.route('/chat',function(){
+	this.render('chat');
+});
 
+Router.configure({
+  layoutTemplate: 'app'
+});
+
+Router.route('/chat/:channel', function () {
+	Session.set('channel', this.params.channel);
+	this.render('messages');
+});
+
+Router.route('/general', function () {
+	this.redirect('/general');
 });

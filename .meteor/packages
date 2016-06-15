@@ -17,15 +17,24 @@ standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
-renaldo:youtube-api
-sacha:spin
-iron:router
-aldeed:collection2
-materialize:materialize
-session
-adrianliaw:youtube-iframe-api
-accounts-password
-accounts-ui
-afruth:chapp
+#autopublish             # Publish all data to the clients (for prototyping)
+#insecure                # Allow all DB writes from clients (for prototyping)
+
+
+sacha:spin				# Loading Icon
+iron:router				# Simple routing for meteor
+aldeed:collection2		# Database structure maker
+materialize:materialize # Materialize FrameWork
+session					# Sessions 
+# Bound to change
+accounts-password		# Account Pasword
+accounts-ui				# user Login System for Meteor
+
+#Youtube Api
+#adrianliaw:youtube-iframe-api #Youtube Iframe API
+#From Slack Clone
+accounts-base
+anti:fake
+dburles:factory
+email
+

@@ -1,0 +1,12 @@
+<template name="app">
+	{{> header}}
+	<div class="main">
+		{{> loginButtons}}
+		{{> listings}}
+		<div class="l6 offset-l6 m6 offset-m6 col">
+			{{> yield }}
+			
+		</div>
+	</div>
+	{{> footer}}
+</template>
